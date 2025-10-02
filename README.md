@@ -29,4 +29,4 @@ This project contains three Python scripts for analyzing DNA and protein sequenc
 - Data representation and frequency analysis
 
 ## 🧠 Author
-*Your Name* — Fall 2025 — CSC XYZ
+*Graciela Alfaro* — Fall 2025 — CSC 549
