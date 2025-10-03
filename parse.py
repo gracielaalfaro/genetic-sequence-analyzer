@@ -7,18 +7,18 @@ class GeneInfo:
         self.location = ""
     
     def add_synonyms(self, synonyms_str):
-        """Add synonyms from comma-separated string"""
+        # Add synonyms from comma-separated string
         if synonyms_str and synonyms_str.strip():
             # Split by comma and clean up each synonym
             syn_list = [s.strip() for s in synonyms_str.split(',')]
             self.synonyms = [s for s in syn_list if s]
     
     def set_location(self, location):
-        """Set the gene location"""
+        # Set the gene location
         self.location = location.strip() if location else ""
     
     def get_synonyms_string(self):
-        """Return synonyms as comma-separated string"""
+        # Return synonyms as comma-separated string
         return ','.join(self.synonyms) if self.synonyms else "N/A"
     
     def __repr__(self):
@@ -26,7 +26,7 @@ class GeneInfo:
 
 
 class ProteinSequence:
-    """Class to represent a protein sequence from FASTA file"""
+    # Class to represent a protein sequence from FASTA file
     
     def __init__(self, gene_name, sequence):
         self.gene_name = gene_name
@@ -34,11 +34,11 @@ class ProteinSequence:
         self.gene_info = None
     
     def attach_gene_info(self, gene_info):
-        """Attach gene information to this sequence"""
+        # Attach gene information to this sequence
         self.gene_info = gene_info
     
     def get_formatted_header(self):
-        """Return formatted FASTA header with gene info"""
+        # Return formatted FASTA header with gene info
         if self.gene_info:
             synonyms = self.gene_info.get_synonyms_string()
             location = self.gene_info.location if self.gene_info.location else "Unknown"
@@ -47,7 +47,7 @@ class ProteinSequence:
             return f">{self.gene_name}|N/A|Unknown"
     
     def get_formatted_sequence(self, line_length=60):
-        """Return sequence formatted in blocks of specified length"""
+        # Return sequence formatted in blocks of specified length
         formatted_lines = []
         for i in range(0, len(self.sequence), line_length):
             formatted_lines.append(self.sequence[i:i+line_length])
@@ -58,14 +58,14 @@ class ProteinSequence:
 
 
 class FastaParser:
-    """Class to parse FASTA files"""
+    # Class to parse FASTA files
     
     def __init__(self, fasta_file):
         self.fasta_file = fasta_file
         self.sequences = []
     
     def parse(self):
-        """Parse the FASTA file and create ProteinSequence objects"""
+        # Parse the FASTA file and create ProteinSequence objects
         with open(self.fasta_file, 'r') as f:
             current_gene = None
             current_sequence = []
@@ -95,14 +95,14 @@ class FastaParser:
 
 
 class GeneInfoParser:
-    """Class to parse gene information file"""
+    # Class to parse gene information file
     
     def __init__(self, gene_info_file):
         self.gene_info_file = gene_info_file
         self.gene_dict = {}
     
     def parse(self):
-        """Parse the gene information file and create GeneInfo objects"""
+        # Parse the gene information file and create GeneInfo objects
         with open(self.gene_info_file, 'r') as f:
             # Skip header line
             header = f.readline()
@@ -136,13 +136,13 @@ class GeneInfoParser:
 
 
 class FastaWriter:
-    """Class to write formatted FASTA files"""
+    # Class to write formatted FASTA files
     
     def __init__(self, output_file):
         self.output_file = output_file
     
     def write(self, sequences):
-        """Write sequences to output file"""
+        # Write sequences to output file
         with open(self.output_file, 'w') as f:
             for seq in sequences:
                 f.write(seq.get_formatted_header() + '\n')
@@ -150,7 +150,7 @@ class FastaWriter:
 
 
 def main():
-    """Main function to run the parsing pipeline"""
+    # Main function to run the parsing pipeline
     
     print("=" * 70)
     print("FASTA PARSER - Problem 2")
@@ -207,5 +207,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
