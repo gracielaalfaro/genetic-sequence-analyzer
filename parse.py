@@ -1,5 +1,5 @@
 class GeneInfo:
-    """Class to represent gene information from protein-coding_gene.txt"""
+    # Class to represent gene information from protein-coding_gene.txt
     
     def __init__(self, gene_name):
         self.gene_name = gene_name
@@ -207,6 +207,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
