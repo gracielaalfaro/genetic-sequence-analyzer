@@ -3,7 +3,7 @@ Intermediate bioinformatics project — DNA analysis, FASTA parsing, and ORF det
 
 <br>
 
-This project contains three Python scripts for analyzing DNA and protein sequences.
+**This project contains three Python scripts for analyzing DNA and protein sequences.**
 
 <br>
 
