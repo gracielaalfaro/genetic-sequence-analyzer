@@ -1,9 +1,8 @@
 # genetic-sequence-analyzer
 Intermediate bioinformatics project — DNA analysis, FASTA parsing, and ORF detection using Python
-# Bioinformatics Homework 2
-
+<br>
 This project contains three Python scripts for analyzing DNA and protein sequences.
-
+<br>
 ## 🧬 Part 1: DNA Triplet Analysis
 - Calculates total sequence length
 - Counts frequency of each triplet (codon)
