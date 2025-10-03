@@ -1,9 +1,3 @@
-"""
-parse.py - Homework 2, Problem 2
-Parses human.fa and protein-coding_gene.txt to create annotated FASTA file
-Uses class objects to represent sequences and gene information
-"""
-
 class GeneInfo:
     """Class to represent gene information from protein-coding_gene.txt"""
     
@@ -213,3 +207,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
