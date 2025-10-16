@@ -31,5 +31,11 @@ Intermediate bioinformatics project — DNA analysis, FASTA parsing, and ORF det
 - Bioinformatics logic (complements, ORFs)
 - Data representation and frequency analysis
 
+## Future Expansions
+- Incorporate Double Stranded Analysis and Reverse Complement
+- Protein Translation and Functional Annotation
+- Visualization of Sequence Data
+
+  
 ## 🧠 Author
 *Graciela Alfaro* — Fall 2025 — CSC 549
